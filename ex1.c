@@ -68,7 +68,7 @@ int main() {
   int num4;
   printf("Please enter a number:\n");
   scanf("%d", &num4);
-  printf("%d\n", (num4)&1);
+  printf("%d\n", ((num4)&1)^1);
   
   // 3, 5, 7, 11
   printf("\n3, 5, 7, 11:\n");
@@ -82,7 +82,7 @@ int main() {
   printf("Please enter the second number (octal):\n");
   scanf("%o", &num6);
   int sum = num5+num6;
-  printf("The sum in hexadecimal: %x\n", sum);
+  printf("The sum in hexadecimal: %X\n", sum);
   printf("The 3,5,7,11 bits are: %d",(sum>>3)&1);
   printf("%d",(sum>>5)&1);
   printf("%d",(sum>>7)&1);
