@@ -66,11 +66,8 @@ int main() {
   /* Scan an integer
   If the number is even - print 1, else - print 0. */
   int num4;
-  int position4;
   printf("Please enter a number:\n");
   scanf("%d", &num4);
-  printf("Please enter a position:\n");
-  scanf("%d", &position4);
   printf("%d\n", (num4)&1);
   
   // 3, 5, 7, 11
@@ -80,15 +77,16 @@ int main() {
   Print only 4 bits, in positions: 3,5,7,11 in the result. */
   int num5 =0;
   int num6 =0;
-  printf("Please enter the first number(octal):\n");
+  printf("Please enter the first number (octal):\n");
   scanf("%o", &num5);
-  printf("Please enter the second number(octal):\n");
+  printf("Please enter the second number (octal):\n");
   scanf("%o", &num6);
-  printf("The sum in hexadecimal: %x\n", num5+num6);
-  printf("The 3,5,7,11 bits are: %d",(num5+num6>>3)&1);
-  printf("%d",(num5+num6>>5)&1);
-  printf("%d",(num5+num6>>7)&1);
-  printf("%d\n",(num5+num6>>11)&1);
+  int sum = num5+num6;
+  printf("The sum in hexadecimal: %x\n", sum);
+  printf("The 3,5,7,11 bits are: %d",(sum>>3)&1);
+  printf("%d",(sum>>5)&1);
+  printf("%d",(sum>>7)&1);
+  printf("%d\n",(sum>>11)&1);
   printf("Bye!\n");
   
   return 0;
